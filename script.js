@@ -4,7 +4,7 @@ var capital = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var lower = "abcdefghijklmnopqrstuvwxyz"
 var number = "1234567890"
 var symbol = "!@#$%&*+?="
- 
+// Moved this up here because so the addEventListener would begin the app 
 //Get user password length
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -14,6 +14,12 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
   var passlength = (prompt("Chose your password length. It must between 8 and 128 characters."));
+    if (passlength < 8){
+      alert ("Password must have at least 8 characters!")
+    }
+    if (passlength > 128){
+      alert ("Password can not exceed 128 characters!")
+    }
   var low = confirm("Would you like lower case characters to be included?");
   var cap = confirm("Would you like captial letters to be included?");
   var num = confirm("Would you like numeric characters to be included?");
@@ -21,7 +27,7 @@ function writePassword() {
 
  
  
-  
+  //Console.log out the var last variables to make sure it prints the correct data
 
   console.log(passlength)
   console.log(low)
@@ -31,7 +37,7 @@ function writePassword() {
 
   
   
- 
+ //need a var for the password data that will change while the user is selecting their parameters
 
   var pwd; 
   
@@ -87,6 +93,8 @@ function writePassword() {
 
 
   console.log(pwd)
+
+// once have the password var code complete and working, I need code to randomize the data selected
 
   var password = "";
 
