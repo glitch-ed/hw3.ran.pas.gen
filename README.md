@@ -5,6 +5,8 @@ As the project asked I created an application that generated a random password a
 
 I know there isn't a wrong or right way of doing things so I just thought out the process and executed it that way. 
 
-I got the end result I was looking although I'm sure there are other ways of doing so this is what I did.
+I used if and else for every condition, I also added a two addition prompts to ensure the user stayed between the 8 and 128 character parameter. 
+
+I then used a for loop with math.random to randomize the data produced and I used math.floor to round to the whole number. 
 
 

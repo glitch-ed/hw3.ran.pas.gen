@@ -13,12 +13,12 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var passlength = (prompt("Chose your password length. It must between 8 and 128 characters."));
+  var passlength = (prompt("Choose your password length. It must between 8 and 128 characters."));
     if (passlength < 8){
-      alert ("Password must have at least 8 characters!")
+      passlength = (prompt ("Password must have at least 8 characters!"))
     }
-    if (passlength > 128){
-      alert ("Password can not exceed 128 characters!")
+    if (passlength > 128) {
+      passlength = (prompt ("Password can not exceed 128 characters!"))
     }
   var low = confirm("Would you like lower case characters to be included?");
   var cap = confirm("Would you like captial letters to be included?");
@@ -86,7 +86,7 @@ function writePassword() {
   else if (sym) {
     pwd = symbol;
   }
-  else prompt("Please enter a value!")
+  else alert("Please enter a value!")
 
 
 
